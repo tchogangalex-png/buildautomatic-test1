@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "No dependencies to install for this static website"
+  build:
+    commands:
+      - echo "Preparing static site artifacts"
+  post_build:
+    commands:
+      - echo "Build completed on `date`"
+
+artifacts:
+  files:
+    - index.html
+    - assets/**/*
+    - pages/**/*
+  discard-paths: no
+cache:
+  paths: []
